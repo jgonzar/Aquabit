@@ -69,7 +69,7 @@ p{
         height:30px;
         width:152px;
         margin:10px auto 0;
-        background-image:url("/built/assets/aquabit-logo.svg");
+        background-image:url("./assets/aquabit-logo.svg");
         background-repeat:no-repeat;
         background-position:center;
         background-size:cover;
@@ -199,7 +199,7 @@ p{
         width:16px;
         height:16px;
         margin-left: 10px;
-        background-image: url("./assets/");
+        background-image: url("./assets/trend-down.svg");
         background-size:cover;
         background-position:center;
         background-repeat: no-repeat;
@@ -209,7 +209,7 @@ p{
         width:16px;
         height:16px;
         margin-left: 10px;
-        background-image: url("/built/assets/trend-up.svg");
+        background-image: url("./assets/trend-up.svg");
         background-size:cover;
         background-position:center;
         background-repeat: no-repeat;
@@ -296,7 +296,7 @@ p{
         width:100%;
         min-width:320px;
         max-width:768px;
-        background-image: url("/built/assets/bitcoin-girl.jpg");
+        background-image: url("./assets/bitcoin-girl.jpg");
         background-repeat: no-repeat;
         background-position:center;
         background-size: cover;
