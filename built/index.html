@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,16 +11,223 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Montserrat:wght@100;300;400;500;700&display=swap" rel="stylesheet">
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!-- Font awesome -->
+    <script src="https://kit.fontawesome.com/0781396110.js" crossorigin="anonymous"></script>
     <!-- Styles -->
     <link rel="stylesheet" href="./css/styles.css">
-    <link rel="stylesheet" href="./css/tablet.css" media="(min-width:768px)">
-    <link rel="stylesheet" href="./css/desktop.css" media=" (min-width:1024px)">
+    <!-- <link rel="stylesheet" href="./css/tablet.css" media="(min-width:768px)">
+    <link rel="stylesheet" href="./css/desktop.css" media=" (min-width:1024px)"> -->
 </head>
 <body>
-    
+    <!-- Header -->
+    <header>
+        <!-- Navigation -->
+        <nav id="nav"class="navbar navbar-expand-lg navbar-light .bg">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#benefits">Beneficios</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#currency">Monedas</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#pricing">Planes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contáctanos</a>
+                  </li>
+              </ul>
+            </div>
+            <a class="navbar-brand" href="#"></a>
+          </nav>
+        <div class = "header-text">
+            <h3>La próxima revolución en el intercambio de criptomonedas.</h3>
+            <p>AquaBit te ayuda a navegar entre los diferentes precios y tendencias.</p>
+        </div>
+        <div class="cta">
+            <a href="#pricing">Conoce nuestros planes <img src="./assets/arrow-down.svg" alt="arrow down"></a>
+            
+        </div>
+    </header>
+    <!-- Main -->
+    <main>
+        <section id="currency" class="currency-container">
+            <div class="currency-img-container">
+                <img src="./assets/bitcoin-logo.png" alt="Bitcoin logo">
+            </div>
+            <div class="currency-text-container">
+                <h3>Visibilizamos todas las tasas de cambio.</h3>
+                <p>Traemos información en tiempo real de las casas de cambio y las monedas más importantes del mundo.</p>
+            </div>
+            <div class="currency-tables-container">
+                <!-- Monedas -->
+                <h3>Monedas</h3>
+                <div class="currency-table">
+                    <table>
+                        <tr>
+                            <td class="table__top-left">Bitcoin</td>
+                            <td class="table__top-right table__right">$ 1.96 <span class="down"></span></td>
+                        </tr>
+                        <tr>
+                            <td>Ethereum</td>
+                            <td class="table__right">$ 0.07 <span class="up"></span></td>
+                        </tr>
+                        <tr>
+                            <td>Ripple</td>
+                            <td class="table__right">$ 2.15 <span class="down"></span></td>
+                        </tr>
+                        <tr>
+                            <td class="table__bot-left">Stellar</td>
+                            <td class="table__bot-right table__right">$ 4.96 <span class="down"></span></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="currency-table-date">
+                    <p><b>Actualizado:</b> 23 Enero 2022</p>
+                </div>
+                <!-- Corredoras -->
+                <h3>Corredoras</h3>
+                <div class="currency-table">
+                    <table>
+                        <tr>
+                            <td class="table__top-left">Bitrade</td>
+                            <td class="table__top-right table__right">$ 12.96</td>
+                        </tr>
+                        <tr>
+                            <td>Bitpreco</td>
+                            <td class="table__right">$ 13.07</td>
+                        </tr>
+                        <tr>
+                            <td>Novadax</td>
+                            <td class="table__right">$ 13.15</td>
+                        </tr>
+                        <tr>
+                            <td class="table__bot-left">Coinext</td>
+                            <td class="table__bot-right table__right">$ 14.96</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="currency-table-date1">
+                    <p><b>Actualizado:</b> 23 Enero 2022</p>
+                </div>
+            </div>
+        </section>
+        <!-- Benficios -->
+        <section id="benefits" class="benefits-main-container">
+            <div class="benefits-container">
+                <img class="aqua-blue-logo" src="/built/assets/aquabit-blue-logo.svg" alt="AquaBit logo">
+                <div class="benefits-text-container">
+                    <h3>Creamos un producto sin comparación.</h3>
+                    <p>Confiable y diseñado para su uso diario.</p>
+                </div>
+                <article class="benefits-card">
+                    <img src="./assets/clock-ab.svg" alt="Reloj">
+                    <h4>Tiempo real</h4>
+                    <p>Nuestro API toma información minuto a minuto sobre las tasas que más determinan el comportamiento.</p>
+                </article>
+                <article class="benefits-card">
+                    <img src="./assets/eye-ab.svg" alt="Ojo">
+                    <h4>No hay tasas escondidas</h4>
+                    <p>Ni en la compra o al momento de exit, Batabit siempre te muestra el costo real de lo que estás adquiriendo.</p>
+                </article>
+                <article class="benefits-card">
+                    <img src="./assets/dollar-sign-ab.svg" alt="Signo de dolar">
+                    <h4>Compara monedas</h4>
+                    <p>Ni en la compra o al momento de exit, Batabit siempre te muestra el costo real de lo que estás adquiriendo.</p>
+                </article>
+                <article class="benefits-card">
+                    <img src="./assets/check-ab.svg" alt="Ícono de check">
+                    <h4>Información confiable</h4>
+                    <p>Nuestras fuentes están 100% verificadas y continuamos auditando su contenido mientras se actualizan.</p>
+                </article>
+            </div>
+        </section>
+        <section>
+            <div class="bit-girl">
+                <h3>Conócelo hoy</h3>
+            </div>
+        </section>
+        <!-- Pricing -->
+        <section id="pricing" class="pricing-main-container">
+            <div class="pricing-text">
+                <h2>Escoge el plan que mejor se ajuste a ti.</h2>
+                <p>Cualquier plan te da acceso completo a nuestra plataforma.</p>
+            </div>
+            <article class="pricing-card">
+                <div class="recommended-container">
+                    <p>Recomendado</p>
+                </div>
+                <div class="pricing-container">
+                    <h4>Pago Anual</h4>
+                    <p class="dollar-sign">$</p>
+                    <p class="price">99</p>
+                    <p class="saving">*Ahorras $129 comparado al plan mensual.</p>
+                </div>
+                <a href="#" class="pricing-btn">
+                    Escoger este
+                     <img src="./assets/right-arrow-cyan.svg" alt="Flecha apuntando hacia la derecha">
+                 </a>>
+            </article>
+            <article class="pricing-card">
+                <div class="recommended-container1">
+                    <p>Recomendado</p>
+                </div>
+                <div class="pricing-container">
+                    <h4>Pago Mensual</h4>
+                    <p class="dollar-sign">$</p>
+                    <p class="price">9,99</p>
+                    <p class="saving">*Ahorras $129 comparado al plan mensual.</p>
+                </div>
+                <a href="#" class="pricing-btn">
+                   Escoger este
+                    <img src="./assets/right-arrow-cyan.svg" alt="Flecha apuntando hacia la derecha">
+                </a>>
+            </article>
+            <article class="pricing-card2">
+                <div class="recommended-container2">
+                    <p>Recomendado</p>
+                </div>
+                <div class="pricing-container2">
+                    <h4>Pago de por vida</h4>
+                    <p class="dollar-sign">$</p>
+                    <p class="price">299</p>
+                    <p class="saving">*Ahorras $129 comparado al plan mensual.</p>
+                </div>
+                <a href="#" class="pricing-btn2">
+                    Escoger este
+                     <img src="./assets/right-arrow-cyan.svg" alt="Flecha apuntando hacia la derecha">
+                 </a>>
+            </article>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="footer-grid-container">
+            <div class="social-container">
+                <a href="#">LinkedIn</a>
+                <a href="#">Crunchbase</a>
+                <a href="#">Hackernews</a>
+            </div>
+            <div class="ABit-logo">
+                <img src="./assets/abit-logo.svg" alt="Logo alternativo de AquaBit">
+            </div>
+        </div>
+        <div class="copyright-container">
+            <p>Copyright by<br>José Ángel González 2022</p>
+        </div>
+    </footer>
     <!-- Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <!-- Main JS -->
+    <script src="/built/main.js"></script>
 </body>
 </html>
