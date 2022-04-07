@@ -1,0 +1,82 @@
+header{
+    height:auto;
+    width:100%;
+    min-width:320px;
+    margin:0 auto;
+    background-image:linear-gradient(207.8deg,#2BFD99,#2B7DFD);
+    padding:0 0 40px;
+}
+/* Nav */
+.navbar{
+    display:block;
+    padding:16px;
+}
+nav .bg{
+    background-color:transparent;
+}
+/* Hamburger menu */
+.navbar-light .navbar-toggler{
+    background-image:none;
+    border:1px solid var(--white);
+    color:var(--white);
+    font-size:1.6rem;
+}
+/* Nav link */
+.navbar-light .navbar-nav .nav-link{
+    color:white;
+    font-size:1.4rem;
+    font-weight: lighter;
+}
+.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link{
+    color:var(--white);
+    font-weight:500;
+}
+/* Logo */
+nav .navbar-brand{
+    display:block;
+    height:30px;
+    width:152px;
+    margin:10px auto 0;
+    background-image:url("./assets/aquabit-logo.svg");
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size:cover;
+}
+/* Header text */
+.header-text{
+    width:80%;
+    margin:0 auto;
+    text-align: center;
+    color:var(--white);
+}
+.header-text h3{
+    font-size:1.8rem;
+    font-weight: 700;
+    margin-top: 30px;
+}
+.header-text p{
+    font-size:1.2rem;
+    font-weight:300;
+    margin-top: 40px;
+}
+.cta{
+    display: flex;
+    position: relative;
+    top:60px;
+    left:calc(15%);
+    height:40px;
+    width:70%;
+    background-color: var(--white);
+    border-radius:5px;
+    justify-content: center;
+    align-items:center;
+    padding: 5px 8px;
+}
+.cta a{
+    text-decoration: none;
+    font-size:1.4rem;
+    color:var(--black);
+}
+.cta img{
+    cursor: pointer;
+}

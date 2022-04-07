@@ -1,0 +1,47 @@
+.benefits-main-container{
+    height: auto;
+    width: 100%;
+    min-width:320px;
+    background-color:var(--blackish);
+    padding-bottom: 20px;;
+} 
+/* img */
+.aqua-blue-logo{
+    position:relative;
+    top:-15px;
+    left:calc(45%);
+}
+/* Text */
+.benefits-text-container{
+    text-align:center;
+    color:var(--white);
+    padding:0 10px;
+}
+.benefits-text-container h3{
+    font-size:1.6rem;
+}
+.benefits-text-container p{
+    font-size:1.2rem;
+    margin:30px 0;
+}
+.benefits-card{
+    height:auto;
+    width:90%;
+    padding:30px 15px;
+    margin:20px auto;
+    border-radius:10px;
+    background-color:var(--lightblackish);
+}
+.benefits-card img{
+    height:18px;
+    width:18px;
+}
+.benefits-card h4{
+    font-size:1.4rem;
+    color:var(--white);
+    margin:10px 0;
+}
+.benefits-card p{
+    font-size:1.2rem;
+    color:var(--lightgrey);
+}

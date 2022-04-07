@@ -1,0 +1,130 @@
+.currency-container{
+    height:auto;
+    width: 100%;
+    min-width:320px;
+    margin:0 auto;
+}
+.currency-img-container{
+    height: 320px;
+    width: 320px;
+    margin:0 auto;
+    background-image: url("./assets/bitcoin-logo.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center;
+}
+.currency-img-container img{
+    display:block;
+    height:auto;
+    width:100%;
+    margin:0 auto;
+}
+.currency-text-container{
+    text-align: center;
+}
+.currency-text-container p{
+    font-size:1.2rem;
+    color:var(--lightgrey);
+    margin-top:30px;
+}
+/* Currency tables */
+.currency-tables-container{
+    height: auto;
+    width:100%;
+    justify-content: center;
+    text-align: center;
+    margin:60px 0;
+}
+.currency-tables-container h3{
+    font-size: 1.8rem;
+    margin-bottom:30px;
+}
+.currency-tables-container h3:first-of-type{
+    color:var(--blue);
+}
+.currency-tables-container h3:last-of-type{
+    color:var(--aqua);
+}
+.currency-table table{
+    height: 250px;
+    width:70%;
+    margin:0 auto 20px;
+}
+.currency-table td{
+    width:50%;
+    font-size: 1.6rem;
+    font-weight:500;
+    line-height:1.8rem;
+    color:var(--grey);
+    background:#FFF;
+    border-bottom:0.5px solid var(--emerald);
+} 
+.currency-table .table__bot-left, .currency-table .table__bot-right {
+    border-bottom: none;
+}
+.currency-table .table__top-left{
+    border-radius: 10px 0 0 0;
+}
+.currency-table .table__top-right{
+    border-radius: 0 10px 0 0;
+}
+.currency-table .table__bot-right{
+    border-radius:  0 0 10px 0;
+}
+.currency-table .table__bot-left{
+    border-radius: 0 0 0 10px;
+}
+.currency-table .table__right{
+    font-size:1.4rem;
+    font-weight:normal;
+    line-height:1.6rem;
+    color:#757575;
+    border-left:0.5px solid var(--emerald);
+}
+.currency-table .down{
+    display:inline-block;
+    width:16px;
+    height:16px;
+    margin-left: 10px;
+    background-image: url("./assets/trend-down.svg");
+    background-size:cover;
+    background-position:center;
+    background-repeat: no-repeat;
+}
+.currency-table .up{
+    display:inline-block;
+    width:16px;
+    height:16px;
+    margin-left: 10px;
+    background-image: url("./assets/trend-up.svg");
+    background-size:cover;
+    background-position:center;
+    background-repeat: no-repeat;
+}
+/* date container */
+.currency-table-date{
+    display:flex;
+    height: 30px;
+    width:60%;
+    margin:0 auto 30px;
+    background-color:#2bfd974f;
+    justify-content:center;
+    align-items: center;
+    border-radius:5px;
+}
+.currency-table-date p, .currency-table-date b{
+    font-size:1rem;
+}
+.currency-table-date1{
+    display:flex;
+    height: 30px;
+    width:60%;
+    margin:0 auto 30px;
+    background-color:#27a1e359;
+    justify-content:center;
+    align-items: center;
+    border-radius:5px;
+}
+.currency-table-date1 p, .currency-table-date1 b{
+    font-size:1rem;
+}

@@ -1,0 +1,29 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+html,body{
+    height:100%;
+    width:100%;
+    font-size:62.5%;
+    font-family: 'DM Sans', sans-serif;
+    background-color:var(--lightergrey);
+    scroll-behavior: smooth;
+}
+p{
+    margin:0;
+}
+:root{
+    --blue:#2B7DFD;
+    --lightblue:#27A2E3;
+    --cyan:#37E9FA;
+    --aqua:#27E3BF;
+    --emerald:#2BFD99;
+    --white:#FFF;
+    --black:#000;
+    --blackish:#201E1C;
+    --lightblackish:#282623;
+    --lightgrey:#757575;
+    --lightergrey:#e5e5e5;
+}

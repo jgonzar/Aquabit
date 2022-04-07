@@ -1,482 +1,606 @@
-/* Globals */
-*{
-    box-sizing: border-box;
-    margin:0;
-    padding:0;
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-html,body{
-    height:100%;
-    width:100%;
-    font-size:62.5%;
-    font-family: 'DM Sans', sans-serif;
-    background-color:var(--lightergrey);
-    scroll-behavior: smooth;
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 62.5%;
+  font-family: 'DM Sans', sans-serif;
+  background-color: var(--lightergrey);
+  scroll-behavior: smooth;
 }
-p{
-    margin:0;
+
+p {
+  margin: 0;
 }
-/* Varibales */
-:root{
-    --blue:#2B7DFD;
-    --lightblue:#27A2E3;
-    --cyan:#37E9FA;
-    --aqua:#27E3BF;
-    --emerald:#2BFD99;
-    --white:#FFF;
-    --black:#000;
-    --blackish:#201E1C;
-    --lightblackish:#282623;
-    --lightgrey:#757575;
-    --lightergrey:#e5e5e5;
+
+:root {
+  --blue:#2B7DFD;
+  --lightblue:#27A2E3;
+  --cyan:#37E9FA;
+  --aqua:#27E3BF;
+  --emerald:#2BFD99;
+  --white:#FFF;
+  --black:#000;
+  --blackish:#201E1C;
+  --lightblackish:#282623;
+  --lightgrey:#757575;
+  --lightergrey:#e5e5e5;
 }
-/* Header */
-    header{
-        height:auto;
-        width:100%;
-        min-width:320px;
-        max-width:768px;
-        background-image:linear-gradient(207.8deg,#2BFD99,#2B7DFD);
-        padding:0 0 40px;
-    }
-    /* Nav */
-    .navbar{
-        display:block;
-        padding:16px;
-    }
-    nav .bg{
-        background-color:transparent;
-    }
-    /* Hamburger menu */
-    .navbar-light .navbar-toggler{
-        background-image:none;
-        border:1px solid var(--white);
-        color:var(--white);
-        font-size:1.6rem;
-    }
-    /* Nav link */
-    .navbar-light .navbar-nav .nav-link{
-        color:white;
-        font-size:1.4rem;
-        font-weight: lighter;
-    }
-    .navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link{
-        color:var(--white);
-        font-weight:500;
-    }
-    /* Logo */
-    nav .navbar-brand{
-        display:block;
-        height:30px;
-        width:152px;
-        margin:10px auto 0;
-        background-image:url("./assets/aquabit-logo.svg");
-        background-repeat:no-repeat;
-        background-position:center;
-        background-size:cover;
-    }
-    /* Header text */
-    .header-text{
-        width:80%;
-        margin:0 auto;
-        text-align: center;
-        color:var(--white);
-    }
-    .header-text h3{
-        font-size:1.8rem;
-        font-weight: 700;
-        margin-top: 30px;
-    }
-    .header-text p{
-        font-size:1.2rem;
-        font-weight:300;
-        margin-top: 40px;
-    }
-    .cta{
-        display: flex;
-        position: relative;
-        top:60px;
-        left:calc(15%);
-        height:40px;
-        width:70%;
-        background-color: var(--white);
-        border-radius:5px;
-        justify-content: center;
-        align-items:center;
-        padding: 5px 8px;
-    }
-    .cta a{
-        text-decoration: none;
-        font-size:1.4rem;
-        color:var(--black);
-    }
-    .cta img{
-        cursor: pointer;
-    }
-/*  */
-/* main */
-    /* img */
-    .currency-container{
-        height:auto;
-        width: 100%;
-        min-width:320px;
-        max-width:768px;
-    }
-    .currency-img-container{
-        width: 100%;
-    }
-    .currency-img-container img{
-        display:block;
-        height:auto;
-        width:100%;
-        margin:0 auto;
-    }
-    /* Text */
-    .currency-text-container{
-        text-align: center;
-    }
-    .currency-text-container p{
-        font-size:1.2rem;
-        color:var(--lightgrey);
-        margin-top:30px;
-    }
-    /* Currency tables */
-    .currency-tables-container{
-        height: auto;
-        width:100%;
-        justify-content: center;
-        text-align: center;
-        margin:60px 0;
-    }
-    /* Titles */
-    .currency-tables-container h3{
-        font-size: 1.8rem;
-        margin-bottom:30px;
-    }
-    .currency-tables-container h3:first-of-type{
-        color:var(--blue);
-    }
-    .currency-tables-container h3:last-of-type{
-        color:var(--aqua);
-    }
-    .currency-table table{
-        height: 250px;
-        width:70%;
-        margin:0 auto 20px;
-    }
-    .currency-table td{
-        width:50%;
-        font-size: 1.6rem;
-        font-weight:500;
-        line-height:1.8rem;
-        color:var(--grey);
-        background:#FFF;
-        border-bottom:0.5px solid var(--emerald);
-    } 
-    .currency-table .table__bot-left, .currency-table .table__bot-right {
-        border-bottom: none;
-    }
-    .currency-table .table__top-left{
-        border-radius: 10px 0 0 0;
-    }
-    .currency-table .table__top-right{
-        border-radius: 0 10px 0 0;
-    }
-    .currency-table .table__bot-right{
-        border-radius:  0 0 10px 0;
-    }
-    .currency-table .table__bot-left{
-        border-radius: 0 0 0 10px;
-    }
-    .currency-table .table__right{
-        font-size:1.4rem;
-        font-weight:normal;
-        line-height:1.6rem;
-        color:#757575;
-        border-left:0.5px solid var(--emerald);
-    }
-    .currency-table .down{
-        display:inline-block;
-        width:16px;
-        height:16px;
-        margin-left: 10px;
-        background-image: url("./assets/trend-down.svg");
-        background-size:cover;
-        background-position:center;
-        background-repeat: no-repeat;
-    }
-    .currency-table .up{
-        display:inline-block;
-        width:16px;
-        height:16px;
-        margin-left: 10px;
-        background-image: url("./assets/trend-up.svg");
-        background-size:cover;
-        background-position:center;
-        background-repeat: no-repeat;
-    }
-    /* date container */
-    .currency-table-date{
-        display:flex;
-        height: 30px;
-        width:60%;
-        margin:0 auto 30px;
-        background-color:#2bfd974f;
-        justify-content:center;
-        align-items: center;
-        border-radius:5px;
-    }
-    .currency-table-date p, .currency-table-date b{
-        font-size:1rem;
-    }
-    .currency-table-date1{
-        display:flex;
-        height: 30px;
-        width:60%;
-        margin:0 auto 30px;
-        background-color:#27a1e359;
-        justify-content:center;
-        align-items: center;
-        border-radius:5px;
-    }
-    .currency-table-date1 p, .currency-table-date1 b{
-        font-size:1rem;
-    }
-    /* Benefits */
-    .benefits-main-container{
-        height: auto;
-        width: 100%;
-        min-width:320px;
-        max-width:768px;
-        background-color:var(--blackish);
-        padding-bottom: 20px;;
-    } 
-    /* img */
-    .aqua-blue-logo{
-        position:relative;
-        top:-15px;
-        left:calc(45%);
-    }
-    /* Text */
-    .benefits-text-container{
-        text-align:center;
-        color:var(--white);
-        padding:0 10px;
-    }
-    .benefits-text-container h3{
-        font-size:1.6rem;
-    }
-    .benefits-text-container p{
-        font-size:1.2rem;
-        margin:30px 0;
-    }
-    .benefits-card{
-        height:142px;
-        width:90%;
-        padding:20px 15px;
-        margin:20px auto;
-        border-radius:10px;
-        background-color:var(--lightblackish);
-    }
-    .benefits-card img{
-        height:18px;
-        width:18px;
-    }
-    .benefits-card h4{
-        font-size:1.4rem;
-        color:var(--white);
-        margin:10px 0;
-    }
-    .benefits-card p{
-        font-size:1.2rem;
-        color:var(--lightgrey);
-    }
-    /* Bit girl */
-    .bit-girl{
-        height:388px;
-        width:100%;
-        min-width:320px;
-        max-width:768px;
-        background-image: url("./assets/bitcoin-girl.jpg");
-        background-repeat: no-repeat;
-        background-position:center;
-        background-size: cover;
-        padding:80px 0 0;
-    }
-    .bit-girl h3{
-        font-size:1.8rem;
-        font-weight:700;
-        text-align:center;
-        color:var(--white);
-    }
-    /* Pricing */
-    .pricing-main-container{
-        height:auto;
-        width:100%;
-        min-width:320px;
-        max-width:768px;
-        padding:30px 0;
-        background-color:var(--white)
-    }
-    .pricing-text{
-        width:90%;
-        text-align:center;
-        margin: 0 auto;
-        padding:0 0 80px;
-    }
-    .pricing-text h2{
-        font-size:2.4rem;
-    }
-    .pricing-text p{
-        font-size:1.4rem;
-        color: var(--lightgrey);
-    }
-    /* cards */
-    .pricing-card{
-        width:70%;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.16);
-        margin:0 auto 80px;
-        padding:0 0 20px;
-    }
-    .pricing-card2{
-        width:70%;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.16);
-        margin:0 auto 80px;
-        padding:0 0 20px;
-        text-align:center;
-        background-color:var(--blue);
-    }
-    .recommended-container{
-        display:flex;
-        position:relative;
-        top:-15px;
-        left:calc(20%);
-        height: 30px;
-        width: 60%;
-        justify-content: center;
-        align-items: center;
-        background-color:var(--blue);
-        border-radius: 5px;
-    }
-    .recommended-container1{
-        display:flex;
-        position:relative;
-        top:-15px;
-        left:calc(20%);
-        height: 30px;
-        width: 60%;
-        justify-content: center;
-        align-items: center;
-        background-color:var(--cyan);
-        border-radius: 5px;
-    }
-    .recommended-container2{
-        display:flex;
-        position:relative;
-        top:-15px;
-        left:calc(20%);
-        height: 30px;
-        width: 60%;
-        justify-content: center;
-        align-items: center;
-        background-color:var(--emerald);
-        border-radius: 5px;
-    }
-    .recommended-container p, .recommended-container1 p, .recommended-container2 p{
-        font-size:1rem;
-        font-weight:lighter;
-        color:var(--white);
-    }
-    .pricing-container{
-        text-align:center;
-    }
-    .pricing-container2 h4, .pricing-container2 p{
-        color: var(--white);
-    }
-    .dollar-sign{
-        display: inline-block;
-        position:relative;
-        top:-30px;
-        font-size: 1rem;
-    }
-    .price{
-        display:inline-block;
-        font-size: 6rem;
-        font-weight:bold;
-    }
-    .saving{
-        font-size:1.2rem;
-        color:var(--lightgrey);
-        margin-bottom:10px;
-    }
-    .pricing-btn {
-        display:flex;
-        height: 30px;
-        width: 70%;
-        font-size:1.4rem;
-        color:var(--black);
-        text-decoration: none;
-        border:1px solid var(--blue);
-        border-radius: 5px;
-        margin:0 auto;
-        align-items: center;
-        justify-content: center;
-    }
-    .pricing-btn:hover{
-        text-decoration:none;
-        color:var(--lightgrey);
-    }
-    .pricing-btn2{
-        display:flex;
-        height: 30px;
-        width: 70%;
-        font-size:1.4rem;
-        color:var(--white);
-        text-decoration: none;
-        border:1px solid var(--emerald);
-        border-radius: 5px;
-        margin:0 auto;
-        align-items: center;
-        justify-content: center;
-    }
-    .pricing-btn2:hover{
-        text-decoration:none;
-        color:var(--emerald);
-    }
-/*  */
-/* Footer */
-    footer{
-        width:100%;
-        min-width: 320px;
-        max-width: 768px;
-        padding:30px 5px;
-        background-image:linear-gradient(207.8deg,#2BFD99,#2B7DFD);
-    }
-    .footer-grid-container{
-        display:grid;
-        grid-template-columns:repeat(2,1fr);  
-        padding-bottom: 20px;
-    }
-    .social-container{
-        display:flex;
-        flex-direction: column;
-        margin-left:40px;
-    }
-    .social-container a{
-        text-decoration: none;
-        font-size: 1.4rem;
-        color:var(--white);
-    }
-    .social-container a:hover{
-        color:var(--black);
-    }
-    .copyright-container{
-        text-align: center;
-    }
-    .copyright-container p{
-        font-size:0.8rem;
-        color:var(--white);
-    }
-    
-/*  */
+
+header {
+  height: auto;
+  width: 100%;
+  min-width: 320px;
+  margin: 0 auto;
+  background-image: linear-gradient(207.8deg, #2BFD99, #2B7DFD);
+  padding: 0 0 40px;
+}
+
+/* Nav */
+.navbar {
+  display: block;
+  padding: 16px;
+}
+
+nav .bg {
+  background-color: transparent;
+}
+
+/* Hamburger menu */
+.navbar-light .navbar-toggler {
+  background-image: none;
+  border: 1px solid var(--white);
+  color: var(--white);
+  font-size: 1.6rem;
+}
+
+/* Nav link */
+.navbar-light .navbar-nav .nav-link {
+  color: white;
+  font-size: 1.4rem;
+  font-weight: lighter;
+}
+
+.navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show > .nav-link {
+  color: var(--white);
+  font-weight: 500;
+}
+
+/* Logo */
+nav .navbar-brand {
+  display: block;
+  height: 30px;
+  width: 152px;
+  margin: 10px auto 0;
+  background-image: url("./assets/aquabit-logo.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+/* Header text */
+.header-text {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  color: var(--white);
+}
+
+.header-text h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-top: 30px;
+}
+
+.header-text p {
+  font-size: 1.2rem;
+  font-weight: 300;
+  margin-top: 40px;
+}
+
+.cta {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  top: 60px;
+  left: calc(15%);
+  height: 40px;
+  width: 70%;
+  background-color: var(--white);
+  border-radius: 5px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5px 8px;
+}
+
+.cta a {
+  text-decoration: none;
+  font-size: 1.4rem;
+  color: var(--black);
+}
+
+.cta img {
+  cursor: pointer;
+}
+
+.currency-container {
+  height: auto;
+  width: 100%;
+  min-width: 320px;
+  margin: 0 auto;
+}
+
+.currency-img-container {
+  height: 320px;
+  width: 320px;
+  margin: 0 auto;
+  background-image: url("./assets/bitcoin-logo.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.currency-img-container img {
+  display: block;
+  height: auto;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.currency-text-container {
+  text-align: center;
+}
+
+.currency-text-container p {
+  font-size: 1.2rem;
+  color: var(--lightgrey);
+  margin-top: 30px;
+}
+
+/* Currency tables */
+.currency-tables-container {
+  height: auto;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  margin: 60px 0;
+}
+
+.currency-tables-container h3 {
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+}
+
+.currency-tables-container h3:first-of-type {
+  color: var(--blue);
+}
+
+.currency-tables-container h3:last-of-type {
+  color: var(--aqua);
+}
+
+.currency-table table {
+  height: 250px;
+  width: 70%;
+  margin: 0 auto 20px;
+}
+
+.currency-table td {
+  width: 50%;
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 1.8rem;
+  color: var(--grey);
+  background: #FFF;
+  border-bottom: 0.5px solid var(--emerald);
+}
+
+.currency-table .table__bot-left, .currency-table .table__bot-right {
+  border-bottom: none;
+}
+
+.currency-table .table__top-left {
+  border-radius: 10px 0 0 0;
+}
+
+.currency-table .table__top-right {
+  border-radius: 0 10px 0 0;
+}
+
+.currency-table .table__bot-right {
+  border-radius: 0 0 10px 0;
+}
+
+.currency-table .table__bot-left {
+  border-radius: 0 0 0 10px;
+}
+
+.currency-table .table__right {
+  font-size: 1.4rem;
+  font-weight: normal;
+  line-height: 1.6rem;
+  color: #757575;
+  border-left: 0.5px solid var(--emerald);
+}
+
+.currency-table .down {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-left: 10px;
+  background-image: url("./assets/trend-down.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.currency-table .up {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-left: 10px;
+  background-image: url("./assets/trend-up.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* date container */
+.currency-table-date {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 30px;
+  width: 60%;
+  margin: 0 auto 30px;
+  background-color: #2bfd974f;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 5px;
+}
+
+.currency-table-date p, .currency-table-date b {
+  font-size: 1rem;
+}
+
+.currency-table-date1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 30px;
+  width: 60%;
+  margin: 0 auto 30px;
+  background-color: #27a1e359;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 5px;
+}
+
+.currency-table-date1 p, .currency-table-date1 b {
+  font-size: 1rem;
+}
+
+.benefits-main-container {
+  height: auto;
+  width: 100%;
+  min-width: 320px;
+  background-color: var(--blackish);
+  padding-bottom: 20px;
+}
+
+/* img */
+.aqua-blue-logo {
+  position: relative;
+  top: -15px;
+  left: calc(45%);
+}
+
+/* Text */
+.benefits-text-container {
+  text-align: center;
+  color: var(--white);
+  padding: 0 10px;
+}
+
+.benefits-text-container h3 {
+  font-size: 1.6rem;
+}
+
+.benefits-text-container p {
+  font-size: 1.2rem;
+  margin: 30px 0;
+}
+
+.benefits-card {
+  height: auto;
+  width: 90%;
+  padding: 30px 15px;
+  margin: 20px auto;
+  border-radius: 10px;
+  background-color: var(--lightblackish);
+}
+
+.benefits-card img {
+  height: 18px;
+  width: 18px;
+}
+
+.benefits-card h4 {
+  font-size: 1.4rem;
+  color: var(--white);
+  margin: 10px 0;
+}
+
+.benefits-card p {
+  font-size: 1.2rem;
+  color: var(--lightgrey);
+}
+
+.bit-girl {
+  height: 388px;
+  width: 100%;
+  min-width: 320px;
+  background-image: url("./assets/bitcoin-girl.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 80px 0 0;
+}
+
+.bit-girl h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-align: center;
+  color: var(--white);
+}
+
+.pricing-main-container {
+  height: auto;
+  width: 100%;
+  min-width: 320px;
+  padding: 30px 0;
+  background-color: var(--white);
+}
+
+.pricing-text {
+  width: 90%;
+  text-align: center;
+  margin: 0 auto;
+  padding: 0 0 80px;
+}
+
+.pricing-text h2 {
+  font-size: 2.4rem;
+}
+
+.pricing-text p {
+  font-size: 1.4rem;
+  color: var(--lightgrey);
+}
+
+/* cards */
+.pricing-card {
+  width: 70%;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.16);
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.16);
+  margin: 0 auto 80px;
+  padding: 0 0 20px;
+}
+
+.pricing-card2 {
+  width: 70%;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.16);
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.16);
+  margin: 0 auto 80px;
+  padding: 0 0 20px;
+  text-align: center;
+  background-color: var(--blue);
+}
+
+.recommended-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  top: -15px;
+  left: calc(20%);
+  height: 30px;
+  width: 60%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: var(--blue);
+  border-radius: 5px;
+}
+
+.recommended-container1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  top: -15px;
+  left: calc(20%);
+  height: 30px;
+  width: 60%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: var(--cyan);
+  border-radius: 5px;
+}
+
+.recommended-container2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  top: -15px;
+  left: calc(20%);
+  height: 30px;
+  width: 60%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: var(--emerald);
+  border-radius: 5px;
+}
+
+.recommended-container p, .recommended-container1 p, .recommended-container2 p {
+  font-size: 1rem;
+  font-weight: lighter;
+  color: var(--white);
+}
+
+.pricing-container {
+  text-align: center;
+}
+
+.pricing-container2 h4, .pricing-container2 p {
+  color: var(--white);
+}
+
+.dollar-sign {
+  display: inline-block;
+  position: relative;
+  top: -30px;
+  font-size: 1rem;
+}
+
+.price {
+  display: inline-block;
+  font-size: 6rem;
+  font-weight: bold;
+}
+
+.saving {
+  font-size: 1.2rem;
+  color: var(--lightgrey);
+  margin-bottom: 10px;
+}
+
+.pricing-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 30px;
+  width: 70%;
+  font-size: 1.4rem;
+  color: var(--black);
+  text-decoration: none;
+  border: 1px solid var(--blue);
+  border-radius: 5px;
+  margin: 0 auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.pricing-btn:hover {
+  text-decoration: none;
+  color: var(--lightgrey);
+}
+
+.pricing-btn2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 30px;
+  width: 70%;
+  font-size: 1.4rem;
+  color: var(--white);
+  text-decoration: none;
+  border: 1px solid var(--emerald);
+  border-radius: 5px;
+  margin: 0 auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.pricing-btn2:hover {
+  text-decoration: none;
+  color: var(--emerald);
+}
+
+footer {
+  width: 100%;
+  min-width: 320px;
+  padding: 30px 5px;
+  background-image: linear-gradient(207.8deg, #2BFD99, #2B7DFD);
+}
+
+.footer-grid-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  padding-bottom: 20px;
+}
+
+.social-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: 40px;
+}
+
+.social-container a {
+  text-decoration: none;
+  font-size: 1.4rem;
+  color: var(--white);
+}
+
+.social-container a:hover {
+  color: var(--black);
+}
+
+.copyright-container {
+  text-align: center;
+}
+
+.copyright-container p {
+  font-size: 0.8rem;
+  color: var(--white);
+}
+/*# sourceMappingURL=styles.css.map */

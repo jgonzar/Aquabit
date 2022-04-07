@@ -1,0 +1,83 @@
+.header-text h3{
+    font-size:2.4rem;
+}
+.header-text p{
+    font-size:1.6rem;
+}
+.navbar-nav{
+    width:60%;
+    justify-content:space-between;
+    margin:10px auto 40px;
+}
+.navbar-light .navbar-nav .nav-link{
+    font-size:1.8rem;
+}
+
+.currency-img-container{
+    margin:0 auto;
+}
+.currency-text-container p{
+    font-size:1.6rem;
+}
+.benefits-main-container{
+    margin:0 auto;
+}
+.benefits-text-container h3{
+    font-size:2.4rem;
+}
+.benefits-text-container p{
+    font-size:1.6rem;
+    margin:30px 0;
+}
+.benefits-card h4{
+    font-size:2rem;
+    color:var(--white);
+    margin:10px 0;
+}
+.benefits-card p{
+    font-size:1.6rem;
+    color:var(--lightgrey);
+}
+.bit-girl{
+    height:600px;
+    background-image: url("./assets/bitgirl-desk.jpg");
+}
+.bit-girl h3{
+    font-size:4rem;
+}
+.pricing-text h2{
+    font-size:3rem;
+}
+.pricing-text p{
+    font-size:1.8rem
+}
+.pricing-card{
+    width:50%;
+}
+.pricing-card2{
+    width:50%;
+}
+.recommended-container p, .recommended-container1 p, .recommended-container2 p{
+    font-size:1.6rem;
+}
+.price{
+    font-size: 8rem;
+}
+.footer-grid-container{
+    padding-top:40px;
+}
+.social-container{
+    padding-left:60px;
+}
+.social-container a{
+    font-size: 1.8rem;
+}
+.copyright-container p{
+    font-size:1.2rem;
+}
+.copyright-container p{
+    font-size:1.4rem;
+}
+.ABit-logo{
+    padding-left:150px;
+}
